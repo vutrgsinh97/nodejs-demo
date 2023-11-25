@@ -1,0 +1,50 @@
+@baseURL = http://localhost:5000/api
+
+### @name register
+POST {{baseURL}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "sinhdev99",
+  "password": "sinhdev@123"
+}
+
+### @name login
+POST {{baseURL}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "sinhdev97",
+  "password": "sinhdev@123"
+}
+
+
+###
+POST {{baseURL}}/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYxNmExYzQxNTVhZjc5NzZhN2E2YTUiLCJpYXQiOjE3MDA4ODgyODd9.0rcSednWW7sHESTvfOcr4LRNdopKQnRCifompfqvxFY
+
+{
+  "title": "react native",
+  "url": "react native url",
+  "description": "learning react native"
+}
+
+###
+GET {{baseURL}}/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYxNmExYzQxNTVhZjc5NzZhN2E2YTUiLCJpYXQiOjE3MDA4ODgyODd9.0rcSednWW7sHESTvfOcr4LRNdopKQnRCifompfqvxFY
+
+###
+PUT {{baseURL}}/posts/65617b43f7e5b3a25392fd40
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYxNmExYzQxNTVhZjc5NzZhN2E2YTUiLCJpYXQiOjE3MDA4ODgyODd9.0rcSednWW7sHESTvfOcr4LRNdopKQnRCifompfqvxFY
+
+{
+  "title": "vuejs",
+  "url": "vuejs",
+  "description": "learning vuejs"
+}
+
+###
+DELETE  {{baseURL}}/posts/656177e1e63e1872c61d5b4f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYxNmExYzQxNTVhZjc5NzZhN2E2YTUiLCJpYXQiOjE3MDA4ODgyODd9.0rcSednWW7sHESTvfOcr4LRNdopKQnRCifompfqvxFY
